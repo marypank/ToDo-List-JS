@@ -6,9 +6,62 @@
 	<title>ToDo List in Vanilla JS</title>
 
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://kit.fontawesome.com/4164a5c439.js" crossorigin="anonymous"></script>
 </head>
 <body>
-	
+	<div class="to-do">
+		<div class="to-do__input">
+			<input type="text" name="textTask">
+			<button>Add task</button>
+		</div>
+		<div class="to-do__list uncompleted">
+			<div class="to-do__list-title">
+				Uncompleted tasks
+			</div>
+			<div class="to-do__list-item">
+				<input type="checkbox" name="toDoTask1" id="toDoTask1">
+				<label for="toDoTask1">Create a new smth #1</label>
+			</div>
+			<div class="to-do__list-item">
+				<input type="checkbox" name="toDoTask2" id="toDoTask2">
+				<label for="toDoTask2">Create a new smth #2</label>
+			</div>
+			<div class="to-do__list-item">
+				<input type="checkbox" name="toDoTask3" id="toDoTask3">
+				<label for="toDoTask3">Create a new smth #3</label>
+			</div>
+			<div class="to-do__list-item">
+				<input type="checkbox" name="toDoTask4" id="toDoTask4">
+				<label for="toDoTask4">Create a new smth #4</label>
+			</div>
+			<div class="to-do__list-item">
+				<input type="checkbox" name="toDoTask5" id="toDoTask5">
+				<label for="toDoTask5">Create a new smth #5</label>
+			</div>
+			<div class="to-do__list-item">
+				<input type="checkbox" name="toDoTask6" id="toDoTask6">
+				<label for="toDoTask6">Create a new smth #6</label>
+			</div>
+			<div class="to-do__list-item">
+				<input type="checkbox" name="toDoTask7" id="toDoTask7">
+				<label for="toDoTask7">Create a new smth #7</label>
+			</div>
+		</div>
+		<div class="to-do__list completed">
+			<div class="to-do__list-title">
+				Completed tasks
+			</div>
+			<div class="to-do__list-item">
+				<input type="checkbox" name="toDoTaskChecked1" id="toDoTaskChecked1" checked>
+				<label for="toDoTaskChecked1">Create a new smth #1</label>
+			</div>
+			<div class="to-do__list-item">
+				<input type="checkbox" name="toDoTaskChecked2" id="toDoTaskChecked2" checked>
+				<label for="toDoTaskChecked2">Create a new smth #2</label>
+			</div>
+		</div>
+	</div>
+
 	<script type="text/javascript" src="script.js"></script>
 </body>
 </html>

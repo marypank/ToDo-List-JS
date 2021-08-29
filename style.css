@@ -4,4 +4,111 @@
 	box-sizing: border-box;
 }
 
+:root {
+	--primary-color: #bdb2ff;
+	--dark-primary-color: #8f88c2;
+	--light-color: #fafafa; 
+}
+body {
+	color: var(--light-color);
+}
+button, a {
+	color: var(--light-color);
+}
+.to-do {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.to-do__input {
+	display: flex;
+	flex-direction: row;
+	width: 600px;
+	margin: 10px;
+}
+.to-do__input input {
+	width: 80%;
+	outline: none;
+	padding: 7px 10px;
+	border: 2px solid var(--primary-color);
+	border-radius: 0;
+}
+.to-do__input input:focus {
+	border-color: var(--dark-primary-color);
+}
+.to-do__input button {
+	width: 20%;
+	padding: 7px;
+	/* margin: 10px; */
+	border: 2px solid var(--primary-color);
+	background-color: var(--primary-color);
+	border-radius: 0;
+}
+.to-do__input button:hover {
+	border-color: var(--dark-primary-color);
+	background-color: var(--dark-primary-color);
+}
+.to-do__input button:active {
+	transform: scale(0.99);
+}
+.to-do__list {
+	width: 600px;
+	margin: 10px;
+	min-height: 200px;
+	background-color: var(--light-color);
+}
+.to-do__list-title {
+	background: var(--dark-primary-color);
+	font-size: 1.5rem;
+	padding: 10px 0;
+	text-align: center;
+}
+.to-do__list-item {
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+	align-items: center;
+	font-size: 1.1rem;
+	background-color: var(--primary-color);
+	margin: 10px;
+	padding: 10px;
+}
+.to-do__list-item input[type="checkbox"] {
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	height: 15px;
+	width: 15px;
+	background-color: var(--light-color);
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.to-do__list-item input[type="checkbox"]::after {
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 900;
+	content: '\f00c';
+	color: var(--dark-primary-color);
+	display: none;
+}
+.to-do__list-item input[type="checkbox"]:checked {
+	/* background-color: var(--primary-color); */
+}
+.to-do__list-item input[type="checkbox"]:checked::after {
+	display: block;
+}
+
+@media (max-width: 650px) {
+	.to-do__input {
+		width: 100%;
+	}
+	.to-do__list {
+		width: 100%;
+	}
+}
+
+
+
 
