@@ -99,6 +99,17 @@ button, a {
 .to-do__list-item input[type="checkbox"]:checked::after {
 	display: block;
 }
+.to-do__list-item button {
+	background: transparent;
+	border: none;
+	outline: none;
+	font-size: 1.1rem;
+	color: var(--light-color);
+	margin-left: auto;
+}
+.to-do__list-item button:hover {
+	color: var(--dark-primary-color);
+}
 
 @media (max-width: 650px) {
 	.to-do__input {
@@ -108,6 +119,7 @@ button, a {
 		width: 100%;
 	}
 }
+
 
 
 
