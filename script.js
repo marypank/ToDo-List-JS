@@ -42,11 +42,11 @@ function addToDoTask() {
 		uncompletedTasksTitle.after(newDivElem);
 
 		newDeleteBtn.addEventListener('click', deleteTask)
-		newInput.addEventListener('change', completeTask);
+		newInput.addEventListener('change', toggleTask);
 	}
 };
 
-function completeTask() {
+function toggleTask() {
 	let parentElement = this.parentElement;
 	let nextElementSibling = this.nextElementSibling;
 	let newCompletedTask = parentElement.cloneNode(true);
@@ -61,16 +61,8 @@ function completeTask() {
 		completedTasksTitle.after(newCompletedTask);
 
 		newCompletedTask.lastElementChild.addEventListener('click', deleteTask);
-		newCompletedTask.firstElementChild.addEventListener('change', uncompleteTask);
+		newCompletedTask.firstElementChild.addEventListener('change', toggleTask);
 	}
-}
-
-/* too similar */
-function uncompleteTask() {
-	let parentElement = this.parentElement;
-	let nextElementSibling = this.nextElementSibling;
-	let newCompletedTask = parentElement.cloneNode(true);
-
 	if (parentElement.classList.contains('completed')) {
 		newCompletedTask.classList.add('uncompleted');
 		newCompletedTask.classList.remove('completed');
@@ -81,7 +73,7 @@ function uncompleteTask() {
 		uncompletedTasksTitle.after(newCompletedTask);
 
 		newCompletedTask.lastElementChild.addEventListener('click', deleteTask);
-		newCompletedTask.firstElementChild.addEventListener('change', completeTask);
+		newCompletedTask.firstElementChild.addEventListener('change', toggleTask);
 	}
 }
 
